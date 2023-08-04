@@ -1,0 +1,96 @@
+{
+  "project": {
+    "actions": null,
+    "description": null,
+    "keepDependencies": "false",
+    "properties": null,
+    "scm": {
+      "class": "hudson.plugins.git.GitSCM",
+      "plugin": "git@5.2.0",
+      "configVersion": "2",
+      "userRemoteConfigs": [
+        {
+          "hudson.plugins.git.UserRemoteConfig": {
+            "url": "https://github.com/testuser300693/github-actions-cicd.git"
+          }
+        }
+      ],
+      "branches": [
+        {
+          "hudson.plugins.git.BranchSpec": {
+            "name": "*/main"
+          }
+        }
+      ],
+      "doGenerateSubmoduleConfigurations": "false",
+      "submoduleCfg": {
+        "class": "empty-list"
+      },
+      "extensions": null
+    },
+    "assignedNode": "slave",
+    "canRoam": "false",
+    "disabled": "false",
+    "blockBuildWhenDownstreamBuilding": "false",
+    "blockBuildWhenUpstreamBuilding": "false",
+    "triggers": null,
+    "concurrentBuild": "false",
+    "builders": [
+      {
+        "hudson.tasks.Shell": {
+          "command": "echo $PWD\nmkdir test",
+          "configuredLocalRules": null
+        }
+      },
+      {
+        "hudson.tasks.Maven": {
+          "targets": "-B clean verify",
+          "pom": "pom.xml",
+          "usePrivateRepository": "false",
+          "settings": {
+            "class": "jenkins.mvn.DefaultSettingsProvider"
+          },
+          "globalSettings": {
+            "class": "jenkins.mvn.DefaultGlobalSettingsProvider"
+          },
+          "injectBuildVariables": "false"
+        }
+      },
+      {
+        "hudson.plugins.sonar.SonarRunnerBuilder": {
+          "plugin": "sonar@2.15",
+          "project": null,
+          "properties": null,
+          "javaOpts": null,
+          "additionalArguments": null,
+          "jdk": "(Inherit From Job)",
+          "task": "-B clean verify -Psonar"
+        }
+      }
+    ],
+    "publishers": null,
+    "buildWrappers": [
+      {
+        "hudson.plugins.ws__cleanup.PreBuildCleanup": {
+          "plugin": "ws-cleanup@0.45",
+          "deleteDirs": "false",
+          "cleanupParameter": null,
+          "externalDelete": null,
+          "disableDeferredWipeout": "false"
+        }
+      },
+      {
+        "hudson.plugins.timestamper.TimestamperBuildWrapper": {
+          "plugin": "timestamper@1.26"
+        }
+      },
+      {
+        "hudson.plugins.sonar.SonarBuildWrapper": {
+          "plugin": "sonar@2.15",
+          "credentialsId": "sonar",
+          "envOnly": "false"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+# Logfile created on 2023-08-04 10:48:45 +0000 by logger.rb/v1.5.3
+I, [2023-08-04T10:48:45.321410 #1]  INFO -- : Using GitHub Features: Defaults
+I, [2023-08-04T10:48:45.321458 #1]  INFO -- : Auditing 'http://65.0.27.151:8080/'
+I, [2023-08-04T10:48:45.338660 #1]  INFO -- request: GET http://65.0.27.151:8080/api/json?tree=jobs%5Bname%2Curl%2CfullName%5D
+I, [2023-08-04T10:48:45.456556 #1]  INFO -- response: Status 200
+I, [2023-08-04T10:48:45.458096 #1]  INFO -- : Thread collection size: 1
+I, [2023-08-04T10:48:45.459246 #1]  INFO -- request: GET http://65.0.27.151:8080/job/freestyle-job/config.xml
+I, [2023-08-04T10:48:45.468505 #1]  INFO -- response: Status 200
+D, [2023-08-04T10:48:45.485000 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Jobs]: Located transformer for 'hudson.tasks.Shell'
+D, [2023-08-04T10:48:45.485195 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Jobs]: Located transformer for 'hudson.tasks.Maven'
+D, [2023-08-04T10:48:45.485875 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Jobs]: Located transformer for 'hudson.plugins.sonar.SonarRunnerBuilder'
+D, [2023-08-04T10:48:45.486687 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Env]: Located transformer for 'hudson.plugins.ws__cleanup.PreBuildCleanup'
+D, [2023-08-04T10:48:45.486792 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Env]: Located transformer for 'hudson.plugins.timestamper.TimestamperBuildWrapper'
+D, [2023-08-04T10:48:45.486869 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Env]: Failed to locate transformer for 'hudson.plugins.sonar.SonarBuildWrapper'
+I, [2023-08-04T10:48:45.492755 #1]  INFO -- : Output file(s):
+I, [2023-08-04T10:48:45.497611 #1]  INFO -- :   tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
+I, [2023-08-04T10:48:45.498754 #1]  INFO -- :   tmp/audit/freestyle-job/config.json
+I, [2023-08-04T10:48:45.514569 #1]  INFO -- :   tmp/audit/workflow_usage.csv
+I, [2023-08-04T10:48:45.519063 #1]  INFO -- :   tmp/audit/audit_summary.md
+I, [2023-08-04T10:48:50.715863 #1]  INFO -- request: GET https://api.github.com/user
+I, [2023-08-04T10:48:51.080075 #1]  INFO -- response: Status 200
+I, [2023-08-04T10:48:51.084111 #1]  INFO -- : Sending telemetry with transaction id 'd10e810d-24dc-4b6c-b90a-9f206b12f475'

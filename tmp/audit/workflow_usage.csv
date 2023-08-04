@@ -1,0 +1,11 @@
+Pipeline,Action,File path
+freestyle-job,actions/checkout@v3.5.0,tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
+freestyle-job,actions/setup-java@v3.12.0,tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
+freestyle-job,sonarsource/sonarcloud-github-action@v1.9,tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
+
+Pipeline,Secret,File path
+freestyle-job,${{ secrets.SONAR_TOKEN }},tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
+freestyle-job,${{ secrets.SONAR_URL }},tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
+
+Pipeline,Runner,File path
+freestyle-job,slave,tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
