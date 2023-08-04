@@ -1,0 +1,30 @@
+{
+  "flow-definition": {
+    "plugin": "workflow-job@1316.vd2290d3341a_f",
+    "actions": null,
+    "description": null,
+    "keepDependencies": "false",
+    "properties": [
+      {
+        "org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty": {
+          "triggers": [
+            {
+              "hudson.triggers.SCMTrigger": {
+                "spec": "H/50 * * * *",
+                "ignorePostCommitHooks": "false"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "definition": {
+      "class": "org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition",
+      "plugin": "workflow-cps@3731.ve4b_5b_857b_a_d3",
+      "script": "pipeline {\n    agent any\n    options {\n        // Timeout counter starts AFTER agent is allocated\n        timeout(time: 1, unit: 'SECONDS')\n    }\n    stages {\n        stage('Example') {\n            steps {\n                echo 'Hello World'\n            }\n        }\n    }\n}",
+      "sandbox": "false"
+    },
+    "triggers": null,
+    "disabled": "false"
+  }
+}

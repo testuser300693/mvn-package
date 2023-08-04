@@ -1,4 +1,5 @@
 Pipeline,Action,File path
+declarative,actions/checkout@v3.5.0,tmp/audit/declarative/.github/workflows/declarative.yml
 freestyle-job,actions/checkout@v3.5.0,tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
 freestyle-job,actions/setup-java@v3.12.0,tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
 freestyle-job,sonarsource/sonarcloud-github-action@v1.9,tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
