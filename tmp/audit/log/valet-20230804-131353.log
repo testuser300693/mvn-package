@@ -1,0 +1,38 @@
+# Logfile created on 2023-08-04 13:13:53 +0000 by logger.rb/v1.5.3
+I, [2023-08-04T13:13:53.262761 #1]  INFO -- : Using GitHub Features: Defaults
+I, [2023-08-04T13:13:53.262825 #1]  INFO -- : Auditing 'http://65.0.27.151:8080/'
+I, [2023-08-04T13:13:53.291492 #1]  INFO -- request: GET http://65.0.27.151:8080/api/json?tree=jobs%5Bname%2Curl%2CfullName%5D
+I, [2023-08-04T13:13:53.324549 #1]  INFO -- response: Status 200
+I, [2023-08-04T13:13:53.326168 #1]  INFO -- : Thread collection size: 1
+I, [2023-08-04T13:13:53.327321 #1]  INFO -- request: GET http://65.0.27.151:8080/job/declarative/config.xml
+I, [2023-08-04T13:13:53.334235 #1]  INFO -- response: Status 200
+I, [2023-08-04T13:13:53.348382 #1]  INFO -- request: POST http://65.0.27.151:8080/pipeline-model-converter/toJson
+I, [2023-08-04T13:13:53.391941 #1]  INFO -- response: Status 200
+I, [2023-08-04T13:13:53.394620 #1]  INFO -- request: GET http://65.0.27.151:8080/job/freestyle-job/config.xml
+I, [2023-08-04T13:13:53.400798 #1]  INFO -- response: Status 200
+D, [2023-08-04T13:13:53.412498 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Defaults]: Failed to locate transformer for 'any'
+D, [2023-08-04T13:13:53.412592 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-08-04T13:13:53.412677 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Options]: Located transformer for 'timeout'
+D, [2023-08-04T13:13:53.412840 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::RunsOn]: Located transformer for 'any'
+D, [2023-08-04T13:13:53.413091 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Container]: Failed to locate transformer for 'any'
+D, [2023-08-04T13:13:53.413458 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Jobs]: Located transformer for 'echo'
+D, [2023-08-04T13:13:53.414048 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::On]: Located transformer for 'hudson.triggers.SCMTrigger'
+D, [2023-08-04T13:13:53.414891 #1] DEBUG -- : [Transformers::Jenkins::JenkinsfilePipeline::DeclarativePipeline::Concurrency]: Failed to locate transformer for 'org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty'
+D, [2023-08-04T13:13:53.418221 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Jobs]: Located transformer for 'hudson.tasks.Shell'
+D, [2023-08-04T13:13:53.418368 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Jobs]: Located transformer for 'hudson.tasks.Maven'
+D, [2023-08-04T13:13:53.418880 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Jobs]: Located transformer for 'hudson.plugins.sonar.SonarRunnerBuilder'
+D, [2023-08-04T13:13:53.419515 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Env]: Located transformer for 'hudson.plugins.ws__cleanup.PreBuildCleanup'
+D, [2023-08-04T13:13:53.419620 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Env]: Located transformer for 'hudson.plugins.timestamper.TimestamperBuildWrapper'
+D, [2023-08-04T13:13:53.419688 #1] DEBUG -- : [Transformers::Jenkins::DesignerPipeline::Env]: Failed to locate transformer for 'hudson.plugins.sonar.SonarBuildWrapper'
+I, [2023-08-04T13:13:53.424118 #1]  INFO -- : Output file(s):
+I, [2023-08-04T13:13:53.427777 #1]  INFO -- :   tmp/audit/declarative/.github/workflows/declarative.yml
+I, [2023-08-04T13:13:53.429096 #1]  INFO -- :   tmp/audit/declarative/config.json
+I, [2023-08-04T13:13:53.430584 #1]  INFO -- :   tmp/audit/declarative/jenkinsfile
+I, [2023-08-04T13:13:53.434445 #1]  INFO -- :   tmp/audit/freestyle-job/.github/workflows/freestyle-job.yml
+I, [2023-08-04T13:13:53.435811 #1]  INFO -- :   tmp/audit/freestyle-job/config.json
+I, [2023-08-04T13:13:53.452536 #1]  INFO -- :   tmp/audit/workflow_usage.csv
+I, [2023-08-04T13:13:53.458513 #1]  INFO -- :   tmp/audit/audit_summary.md
+I, [2023-08-04T13:13:57.100148 #1]  INFO -- request: GET https://api.github.com/user
+I, [2023-08-04T13:13:57.436253 #1]  INFO -- response: Status 401
+I, [2023-08-04T13:13:57.436676 #1]  INFO -- : GET https://api.github.com/user: 401 - Bad credentials // See: https://docs.github.com/rest
+I, [2023-08-04T13:13:57.436910 #1]  INFO -- : Sending telemetry with transaction id 'ce6d8a9d-fe57-4e92-9b84-b051e3caffb7'
